@@ -1,0 +1,18 @@
+﻿@model UserRoleCheck.Models.HomeViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Roles You Belong To:</h2>
+
+<p class="error">
+    @Model.Message
+</p>
+
+<ul>
+    @foreach (var role in Model.Roles)
+    {
+        <li>@role</li>
+    }
+</ul>
